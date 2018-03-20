@@ -8,10 +8,12 @@ const graphqlRoutes = require('./graphql/routes');
 
 const app = express();
 
+// middlewares
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
+// routes
 app.use('/', pagesRoutes)
 app.use('/graphql', graphqlRoutes);
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(3000, () => console.log('Express app listening on localhost:3000'));
