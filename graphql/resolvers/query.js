@@ -5,7 +5,7 @@ module.exports = {
     return models.Event.findById(id);
   },
   events (root, args, context) {
-    return models.Event.findAll(args, context);
+    return models.Event.findAll({}, context);
   },
   user (root, { id }) {
     return models.User.findById(id);
@@ -17,6 +17,6 @@ module.exports = {
     return models.Room.findById(id);
   },
   rooms (root, args, context) {
-    return models.Room.findAll({ offset: 1 }, context);
+    return models.Room.findAll({}, context);
   }
 };
