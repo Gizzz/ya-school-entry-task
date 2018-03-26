@@ -12,10 +12,11 @@
     "npm": "5.4.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "sass": "node-sass markup-raw/styles/index.scss markup-raw/styles/index.css",
     "lint": "semistandard",
-    "reset-db": "rm -f ./db.sqlite3 && node create-mock-data.js",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reset-db": "rm -f ./db.sqlite3 && node create-mock-data.js"
   },
   "dependencies": {
     "express": "^4.15.4",
@@ -27,6 +28,7 @@
     "sqlite3": "^3.1.9"
   },
   "devDependencies": {
+    "node-sass": "^4.8.3",
     "nodemon": "^1.12.5",
     "semistandard": "^11.0.0"
   }
