@@ -13,7 +13,8 @@
   },
   "scripts": {
     "dev": "nodemon index.js",
-    "sass": "node-sass markup-raw/styles/index.scss markup-raw/styles/index.css",
+    "sass": "node-sass markup-raw/styles/index.scss markup-raw/styles/index.css -w",
+    "static": "static -c 1 markup-raw",
     "lint": "semistandard",
     "test": "echo \"Error: no test specified\" && exit 1",
     "reset-db": "rm -f ./db.sqlite3 && node create-mock-data.js"
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "node-sass": "^4.8.3",
+    "node-static": "^0.7.10",
     "nodemon": "^1.12.5",
     "semistandard": "^11.0.0"
   }
