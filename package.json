@@ -13,8 +13,8 @@
   },
   "scripts": {
     "dev": "nodemon index.js",
-    "sass": "node-sass markup-raw/styles/index.scss markup-raw/styles/index.css -w",
-    "static": "static -c 1 markup-raw",
+    "sass": "node-sass markup-static/styles/index.scss markup-static/styles/index.css -w",
+    "static": "static -c 1 markup-static",
     "lint": "semistandard",
     "test": "echo \"Error: no test specified\" && exit 1",
     "reset-db": "rm -f ./db.sqlite3 && node create-mock-data.js"
