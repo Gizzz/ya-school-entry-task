@@ -1,0 +1,124 @@
+.timeline {
+  &__date-selector {
+    position: relative;
+    border-bottom: 1px solid $color-gray-border;
+    padding: 19px 16px;
+    text-align: center;
+  
+    &__text {
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 600;
+    }
+  
+    &__arrow-left,
+    &__arrow-right {
+      position: absolute;
+      top: 13px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background:
+        url(../img/arrow.svg) no-repeat 44% 52%,
+        $color-gray-border;
+      cursor: pointer;
+    }
+
+    &__arrow-left {
+      left: 16px;
+    }
+  
+    &__arrow-right {
+      right: 16px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__times {
+    display: flex;
+    padding-left: 180px;
+    border-bottom: 1px solid $color-gray-border;
+
+    .timeline__hour {
+      flex-shrink: 0;
+      width: 60px;
+      height: 32px;
+
+      &.timeline__hour--half {
+        width: 30px;
+      }
+
+      span {
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        transform: translateX(-50%);
+        line-height: 32px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__grid {
+    .row {
+      .title {
+        width: 180px;
+        height: 36px;
+
+        h2 {
+          font-weight: 600;
+          font-size: 11px;
+          text-transform: uppercase;
+        }
+      }
+
+      .timetrack {
+        height: 46px;
+      }
+    }
+    
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    &__heading {
+      display: flex;
+    }
+  
+    &__date-selector {
+      flex: 0 0 245px;
+      padding: 14px 24px;
+
+      &__arrow-left,
+      &__arrow-right {
+        top: 11px;
+        width: 24px;
+        height: 24px;
+        background-size: 10px 10px;
+      }
+
+      &__arrow-left {
+        left: 24px;
+      }
+
+      &__arrow-right {
+        right: 24px;
+      }
+    }
+
+    &__times {
+      padding-left: 0;
+
+      .timeline__hour {
+        $height-times: 46px;
+        height: $height-times;
+  
+        span {
+          top: 0;
+          line-height: $height-times;
+        }
+      }
+    }
+  }
+}

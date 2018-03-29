@@ -1,0 +1,40 @@
+.page-header {
+  padding: 13px 20px;
+  border-bottom: 1px solid $color-gray-border;
+
+  &__logo {
+    display: block;
+    width: 150px;
+    height: 22px;
+    background: url(../img/logo.svg) no-repeat 50% 50%;
+  }
+
+  &__create-meeting {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding: 23px 24px;
+  
+    &__logo {
+      width: 174px;
+      height: 24px;
+      background-size: 174px 24px;
+    }
+  
+    &__create-meeting {
+      position: absolute;
+      right: 24px;
+      top: 17px;
+      display: block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #007DFF;
+      color: #fff;
+      line-height: 16px;
+      font-weight: 600;
+    }
+  }
+}

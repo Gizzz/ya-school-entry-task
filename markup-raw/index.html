@@ -5,9 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Meeting Rooms</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic">
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-  <p>Markup here</p>
+  <header class="page-header">
+    <a class="page-header__logo" href="/"></a>
+    <a href="#" class="page-header__create-meeting">Создать встречу</a>
+  </header>
+  <section class="timeline">
+    <div class="timeline__heading">
+      <div class="timeline__date-selector">
+        <div class="timeline__date-selector__arrow-left"></div>
+        <div class="timeline__date-selector__text">14 дек · Сегодня</div>
+        <div class="timeline__date-selector__arrow-right"></div>
+      </div>
+      <div class="timeline__times">
+        <div class="timeline__hour timeline__hour--half"></div>
+        <div class="timeline__hour">
+          <span>8</span>
+        </div>
+        <div class="timeline__hour">
+          <span>9</span>
+        </div>
+        <div class="timeline__hour">
+          <span>10</span>
+        </div>
+        <div class="timeline__hour">
+          <span>11</span>
+        </div>
+        <div class="timeline__hour">
+          <span>12</span>
+        </div>
+        <div class="timeline__hour">
+          <span>13</span>
+        </div>
+        <div class="timeline__hour">
+          <span>14</span>
+        </div>
+        <div class="timeline__hour">
+          <span>15</span>
+        </div>
+        <div class="timeline__hour">
+          <span>16</span>
+        </div>
+        <div class="timeline__hour">
+          <span>17</span>
+        </div>
+        <div class="timeline__hour">
+          <span>18</span>
+        </div>
+        <div class="timeline__hour">
+          <span>19</span>
+        </div>
+        <div class="timeline__hour">
+          <span>20</span>
+        </div>
+        <div class="timeline__hour">
+          <span>21</span>
+        </div>
+        <div class="timeline__hour">
+          <span>22</span>
+        </div>
+        <div class="timeline__hour">
+          <span>23</span>
+        </div>
+        <div class="timeline__hour timeline__hour--half"></div>
+      </div>
+    </div>
+    <!-- no BEM from here -->
+    <div class="timeline__grid">
+      <div class="row">
+        <div class="title title-floor">
+          <h2>7 ЭТАЖ</h2>
+        </div>
+        <div class="timetrack empty"></div>
+      </div>
+      <div class="row">
+        <div class="title title-room">
+          <h3>Ржавый Фред</h3>
+          <p>3-6 человек</p>
+        </div>
+        <div class="timetrack">
+          <div class="cell cell-filled"></div>
+          <div class="cell cell-empty"></div>
+          <div class="cell cell-filled"></div>
+        </div>
+      </div>
+
+      <!-- 
+      <div class="title title-floor">
+        <h2>7 ЭТАЖ</h2>
+      </div>
+      <div class="timetrack empty"></div>
+      <div class="title title-room">
+        <h3>Ржавый Фред</h3>
+        <p>3-6 человек</p>
+      </div>
+      <div class="timetrack">
+        <div class="cell cell-filled"></div>
+        <div class="cell cell-empty"></div>
+        <div class="cell cell-filled"></div>
+      </div>
+      <div class="title title-room">
+        <h3>Прачечная</h3>
+        <p>до 10 человек</p>
+      </div>
+      <div class="timetrack">
+        <div class="cell cell-filled"></div>
+        <div class="cell cell-empty"></div>
+        <div class="cell cell-filled"></div>
+      </div> -->
+
+    </div>
+  </section>
 </body>
 </html>

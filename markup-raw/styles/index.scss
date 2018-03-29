@@ -1,1 +1,18 @@
-@import 'normalize';
+@import '_variables';
+@import '_mixins';
+
+@import 'vendor/normalize';
+@import 'custom-resets';
+
+// common
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1;
+}
+
+// blocks
+
+@import 'blocks/page-header';
+@import 'blocks/timeline';
