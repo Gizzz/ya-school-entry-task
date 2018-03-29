@@ -19,7 +19,7 @@
       height: 32px;
       border-radius: 50%;
       background:
-        url(../img/arrow.svg) no-repeat 44% 52%,
+        url(../img/icon-arrow.svg) no-repeat 44% 52%,
         $color-gray-border;
       cursor: pointer;
     }
@@ -61,22 +61,98 @@
 
   &__grid {
     .row {
-      .title {
-        width: 180px;
-        height: 36px;
+      position: relative;
+      display: flex;
+      height: 60px;
 
-        h2 {
-          font-weight: 600;
-          font-size: 11px;
-          text-transform: uppercase;
+      // width of column representing 1-hour
+      $col-width: 60px;
+      $timetrack-width: $col-width * 16;
+      $title-width-mobile: 180px;
+
+      .title {
+        flex: 0 0 $title-width-mobile;
+        border-right: 1px solid #F7F8F9;
+        padding-left: $padding-content-mobile;
+
+        
+        h3 {
+          margin-top: 13px;
+          font-size: 15px;
+        }
+
+        p {
+          margin-top: 4px;
+        }
+
+        &.no-empty-slots {
+          h3,
+          p {
+            color: $font-color-disabled;
+          }
         }
       }
 
       .timetrack {
-        height: 46px;
+        display: flex;
+        flex: 0 0 $timetrack-width;
+        background: url(../img/bg-timetrack-transparent.png) repeat 30px 0;
+
+        .slot {
+          height: 58px;
+
+          &-filled {
+            background-color: rgba(213, 223, 233, 0.5);
+
+            &.selected {
+              background-color: #98A9B8;
+            }
+          }
+
+          &-empty {
+            background-color: transparent;
+          }
+          
+          &-full_width {
+            width: $timetrack-width;
+          }
+
+          &-quarter_width {
+            width: $timetrack-width / 4;
+          }
+        }
+      }
+
+      .split {
+        position: absolute;
+        bottom: 0;
+        width: $title-width-mobile + $timetrack-width;
+        height: 2px;
+        background-color: #F7F8F9;
       }
     }
-    
+
+    .row-floor {
+      height: 46px;
+      border-bottom: 0;
+
+      .title,
+      .timetrack {
+        background-color: #F7F8F9;
+      }
+
+      .title {
+        border-right: 0;
+
+        h3 {
+          margin-top: 25px;
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: $font-color-disabled;
+        }
+      }
+    }
   }
 }
 
@@ -88,7 +164,7 @@
   
     &__date-selector {
       flex: 0 0 245px;
-      padding: 14px 24px;
+      padding: 14px $padding-content-desktop;
 
       &__arrow-left,
       &__arrow-right {
@@ -99,11 +175,11 @@
       }
 
       &__arrow-left {
-        left: 24px;
+        left: $padding-content-desktop;
       }
 
       &__arrow-right {
-        right: 24px;
+        right: $padding-content-desktop;
       }
     }
 
@@ -117,6 +193,26 @@
         span {
           top: 0;
           line-height: $height-times;
+        }
+      }
+    }
+
+    &__grid {
+      .row {
+        // variables duplication tradeoff (alternative is polluting the global scope)
+
+        // width of column representing 1-hour
+        $col-width: 60px;
+        $timetrack-width: $col-width * 16;
+        $title-width-desktop: 245px;
+
+        .title {
+          flex: 0 0 $title-width-desktop;
+          padding-left: $padding-content-desktop;
+        }
+
+        .split {
+          width: $title-width-desktop + $timetrack-width;
         }
       }
     }
