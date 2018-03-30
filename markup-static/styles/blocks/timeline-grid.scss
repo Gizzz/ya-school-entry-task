@@ -1,8 +1,8 @@
-.timeline {
+.timeline-grid {
   position: relative;
   top: 139px;
 
-  &__grid {
+  .grid-content {
     .row {
       position: relative;
       display: flex;
@@ -100,10 +100,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  .timeline {
+  .timeline-grid {
     top: 118px;
 
-    &__grid {
+    .grid-content {
       .row {
         // variables duplication tradeoff (alternative is polluting the global scope)
 
