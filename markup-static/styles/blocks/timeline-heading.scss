@@ -42,6 +42,7 @@
   }
 
   .timeline__times {
+    position: relative;
     display: flex;
     border-bottom: 1px solid $color-gray-border;
     padding-left: 180px;

@@ -262,5 +262,14 @@
       </div>
     </div>
   </section>
+
+  <script>
+    const times = document.querySelector('.timeline__times');
+    const grid = document.querySelector('.timeline-grid');
+
+    grid.addEventListener('scroll', (e) => {
+      times.style.left = `-${e.target.scrollLeft}px`;
+    });
+  </script>
 </body>
 </html>
