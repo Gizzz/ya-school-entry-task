@@ -1,6 +1,7 @@
 .timeline-grid {
   position: relative;
   top: 139px;
+  overflow-x: auto;
 
   .grid-content {
     .row {
