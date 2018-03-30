@@ -1,6 +1,13 @@
-.timeline {
-  &__date-selector {
-    position: relative;
+.timeline__heading {
+  position: fixed;
+  z-index: 1;
+  top: 49px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+
+  .timeline__date-selector {
     border-bottom: 1px solid $color-gray-border;
     padding: 19px 16px;
     text-align: center;
@@ -34,10 +41,10 @@
     }
   }
 
-  &__times {
+  .timeline__times {
     display: flex;
-    padding-left: 180px;
     border-bottom: 1px solid $color-gray-border;
+    padding-left: 180px;
 
     .timeline__hour {
       flex-shrink: 0;
@@ -58,6 +65,11 @@
       }
     }
   }
+}
+
+.timeline {
+  position: relative;
+  top: 139px;
 
   &__grid {
     .row {
@@ -157,14 +169,14 @@
 }
 
 @media screen and (min-width: 768px) {
-  .timeline {
-    &__heading {
-      display: flex;
-    }
-  
-    &__date-selector {
-      flex: 0 0 245px;
+  .timeline__heading {
+    top: 71px;
+    flex-direction: row;
+
+    .timeline__date-selector {
+      position: relative;
       padding: 14px $padding-content-desktop;
+      flex: 0 0 245px;
 
       &__arrow-left,
       &__arrow-right {
@@ -183,7 +195,7 @@
       }
     }
 
-    &__times {
+    .timeline__times {
       padding-left: 0;
 
       .timeline__hour {
@@ -196,6 +208,10 @@
         }
       }
     }
+  }
+
+  .timeline {
+    top: 118px;
 
     &__grid {
       .row {
